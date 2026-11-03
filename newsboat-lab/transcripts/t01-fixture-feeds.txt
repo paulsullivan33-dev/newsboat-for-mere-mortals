@@ -1,0 +1,27 @@
+# The lab serves three invented fixture feeds (plus one deliberately
+# broken one) from a plain Python web server on loopback, port 18089:
+
+$ python3 -m http.server 18089 --bind 127.0.0.1 --directory www &
+
+$ for f in garden-notes kitchen-journal workshop-podcast broken; do
+    curl -s -o /dev/null -w "%{http_code} %{size_download} bytes  $f.xml\n" \
+      http://127.0.0.1:18089/feeds/$f.xml
+  done
+200 4395 bytes  garden-notes.xml
+200 2050 bytes  kitchen-journal.xml
+200 1529 bytes  workshop-podcast.xml
+200 479 bytes  broken.xml
+
+$ grep -c "<item>" www/feeds/garden-notes.xml www/feeds/workshop-podcast.xml
+www/feeds/garden-notes.xml:8
+www/feeds/workshop-podcast.xml:2
+$ grep -c "<entry>" www/feeds/kitchen-journal.xml
+4
+
+# The subscriptions file (a plain text file, one feed per line;
+# quoted words after a URL are its tags):
+
+$ cat ~/.newsboat/urls
+http://127.0.0.1:18089/feeds/garden-notes.xml "Garden and Kitchen" garden
+http://127.0.0.1:18089/feeds/kitchen-journal.xml "Garden and Kitchen" kitchen
+http://127.0.0.1:18089/feeds/workshop-podcast.xml "Listening" podcast

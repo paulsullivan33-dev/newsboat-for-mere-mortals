@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>Fixture subscriptions for the Newsboat lab</title>
+  </head>
+  <body>
+    <outline text="Garden and Kitchen" title="Garden and Kitchen">
+      <outline type="rss" text="The Example Garden Notes" title="The Example Garden Notes" xmlUrl="http://127.0.0.1:18089/feeds/garden-notes.xml" htmlUrl="http://127.0.0.1:18089/garden/"/>
+      <outline type="rss" text="The Sample Kitchen Journal" title="The Sample Kitchen Journal" xmlUrl="http://127.0.0.1:18089/feeds/kitchen-journal.xml" htmlUrl="http://127.0.0.1:18089/kitchen/"/>
+    </outline>
+  </body>
+</opml>

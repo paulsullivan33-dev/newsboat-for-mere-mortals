@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>The Broken Fixture Feed</title>
+    <description>This file is deliberately malformed: the channel is never closed and a tag below is left open, so a feed parser must refuse it. The lab uses it to show what Newsboat does with a feed it cannot parse.
+    <item>
+      <title>An item nobody will ever read</title>
+      <description>Because the document above it is broken.</description>
+    </item>

@@ -1,0 +1,39 @@
+# Two different settings tidy the cache, and they are easy to confuse.
+# The lab read the source to be sure, then proved each one.
+
+# A: cleanup-on-quit (default: yes) removes feeds you unsubscribed.
+# A copy of the main setup loses the podcast line from its urls:
+
+$ grep -v workshop-podcast urls > cleanhome/urls
+$ sqlite3 cache.db "SELECT count(*) FROM rss_item;"   # before
+14
+# open Newsboat on the copy and quit again:
+--- screen: the feed list before quitting ---
+   Newsboat 2.34.1 - Your feeds (0 unread, 2 total)
+>>    1         (0/8) The Example Garden Notes
+      2         (0/4) The Sample Kitchen Journal
+
+$ sqlite3 cache.db "SELECT count(*) FROM rss_item;"   # after
+12
+$ sqlite3 cache.db "SELECT count(*) FROM rss_feed;"
+2
+# The two podcast articles and their feed row are really gone.
+
+# B: delete-read-articles-on-quit (default: no) is the read-article
+# setting -- and it only flags rows. Another copy, all 14 articles
+# already read, gets the setting and one open-and-quit:
+
+$ sqlite3 cache.db "SELECT count(*) FROM rss_item;"            # rows
+14
+$ sqlite3 cache.db "SELECT count(*) FROM rss_item WHERE deleted = 1;"
+14
+# Reopening the same setup, the flagged articles are invisible:
+--- screen: the feed list before quitting ---
+   Newsboat 2.34.1 - Your feeds (0 unread, 3 total)
+>>    1         (0/0) The Example Garden Notes
+      2         (0/0) The Sample Kitchen Journal
+      3         (0/0) The Workshop Bench Podcast
+
+# The rows stay in the file until the feed leaves the urls file
+# (cleanup above) -- one reason a cache can look bigger than the
+# reading it shows.

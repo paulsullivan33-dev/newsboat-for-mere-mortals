@@ -1,0 +1,290 @@
+
+--- screen: feed list - three feeds, everything unread ---
+   Newsboat 2.34.1 - Your feeds (3 unread, 3 total)
+>>    1 N       (8/8) The Example Garden Notes
+      2 N       (4/4) The Sample Kitchen Journal
+      3 N       (2/2) The Workshop Bench Podcast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>> q:Quit ENTER:Open n:Next Unread r:Reload R:Reload All A:Mark Read C:Mark All Read /:Search ?:Help
+
+--- screen: garden article list - eight unread articles ---
+   Newsboat 2.34.1 - Articles in feed 'The Example Garden Notes' (8 unread, 8 total) - http://127.0.0.1:18089/feeds/garden-
+>>    1 N  Oct 30   257   Watering tomatoes without drowning them
+      2 N  Oct 28   208   Compost: the three-bin habit
+      3 N  Oct 26   225   Why seedlings lean toward the window
+      4 N  Oct 23   227   A five-minute soil test with a jam jar
+      5 N  Oct 21   172   Feeding the soil in autumn
+      6 N  Oct 19   209   Herbs that forgive beginners
+      7 N  Oct 16   207   Reading a seed packet properly
+      8 N  Oct 14   188   The case for a small garden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>> q:Quit ENTER:Open s:Save r:Reload n:Next Unread A:Mark All Read /:Search ?:Help
+
+--- screen: reading the first article ---
+   Newsboat 2.34.1 - Article 'Watering tomatoes without drowning them' (7 unread, 8 total)
+   Feed: The Example Garden Notes
+   Title: Watering tomatoes without drowning them
+   Date: Fri, 30 Oct 2026 08:00:00 +0000
+   Link: http://127.0.0.1:18089/garden/watering-tomatoes.html
+
+   Tomatoes like a deep drink twice a week, not a shallow sip every day. Water at the base of the plant, early in the
+   morning, and keep the leaves dry. A layer of mulch — straw, shredded leaves, or grass clippings — slows the soil
+   drying out between waterings.
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+>> q:Quit s:Save n:Next Unread o:Open in Browser e:Enqueue ?:Help                                                    Top
+
+### The s key opens the save dialog; it suggests a file name built from the title.
+
+--- screen: the save dialog, with its suggested name ---
+   Newsboat 2.34.1 - Save File - /home/hatch/workspace/newsboat-labwork/home
+   drwxrwx--- root     root              608 ../
+   drwxrwx--- root     root               78 .newsboat/
+   drwx------ root     root                0 .w3m/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   File: Watering_tomatoes_without_drowning_them.txt
+>> ESC,q:Cancel ENTER:Save
+
+--- screen: after saving - back in the article, with the saved message at the bottom ---
+   Newsboat 2.34.1 - Article 'Watering tomatoes without drowning them' (7 unread, 8 total)
+   Feed: The Example Garden Notes
+   Title: Watering tomatoes without drowning them
+   Date: Fri, 30 Oct 2026 08:00:00 +0000
+   Link: http://127.0.0.1:18089/garden/watering-tomatoes.html
+
+   Tomatoes like a deep drink twice a week, not a shallow sip every day. Water at the base of the plant, early in the
+   morning, and keep the leaves dry. A layer of mulch — straw, shredded leaves, or grass clippings — slows the soil
+   drying out between waterings.
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+>> q:Quit s:Save n:Next Unread o:Open in Browser e:Enqueue ?:Help                                                    Top
+   Saved article to Watering_tomatoes_without_drowning_them.txt.
+
+--- screen: article list again - the article just read has lost its N flag ---
+   Newsboat 2.34.1 - Articles in feed 'The Example Garden Notes' (7 unread, 8 total) - http://127.0.0.1:18089/feeds/garden-
+>>    1    Oct 30   257   Watering tomatoes without drowning them
+      2 N  Oct 28   208   Compost: the three-bin habit
+      3 N  Oct 26   225   Why seedlings lean toward the window
+      4 N  Oct 23   227   A five-minute soil test with a jam jar
+      5 N  Oct 21   172   Feeding the soil in autumn
+      6 N  Oct 19   209   Herbs that forgive beginners
+      7 N  Oct 16   207   Reading a seed packet properly
+      8 N  Oct 14   188   The case for a small garden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>> q:Quit ENTER:Open s:Save r:Reload n:Next Unread A:Mark All Read /:Search ?:Help
+
+--- screen: feed list again - the garden feed now shows 7 unread of 8 ---
+   Newsboat 2.34.1 - Your feeds (3 unread, 3 total)
+>>    1 N       (7/8) The Example Garden Notes
+      2 N       (4/4) The Sample Kitchen Journal
+      3 N       (2/2) The Workshop Bench Podcast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>> q:Quit ENTER:Open n:Next Unread r:Reload R:Reload All A:Mark Read C:Mark All Read /:Search ?:Help

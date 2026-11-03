@@ -1,0 +1,142 @@
+# Three feeds: one malformed, one missing (404), one healthy.
+$ cat setups/broken/urls
+http://127.0.0.1:18089/feeds/broken.xml
+http://127.0.0.1:18089/feeds/no-such-feed.xml
+http://127.0.0.1:18089/feeds/garden-notes.xml
+
+$ newsboat -u setups/broken/urls -c setups/broken/cache.db -x reload
+exit: 0
+
+$ newsboat -u setups/broken/urls -c setups/broken/cache.db -x print-unread
+8 unread articles
+
+$ sqlite3 setups/broken/cache.db "SELECT rssurl, title FROM rss_feed;"
+http://127.0.0.1:18089/feeds/broken.xml|The Broken Fixture Feed
+http://127.0.0.1:18089/feeds/garden-notes.xml|The Example Garden Notes
+
+--- screen: the feed list - the healthy feed loaded, two did not ---
+   Newsboat 2.34.1 - Your feeds (1 unread, 3 total)
+>>    1         (0/0) The Broken Fixture Feed
+      2         (0/0) http://127.0.0.1:18089/feeds/no-such-feed.xml
+      3 N       (8/8) The Example Garden Notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open n:Next Unread r:Reload R:Reload All A:Mark Read C:Mark All Read /:Search ?:Help
+
+### Inside the interface the failures are visible: two feeds at (0/0),
+### one of them showing its raw URL because no title ever arrived.
+
+--- screen: after a reload-all - errors at the bottom of the screen ---
+   Newsboat 2.34.1 - Your feeds (1 unread, 3 total)
+>>    1         (0/0) The Broken Fixture Feed
+      2         (0/0) http://127.0.0.1:18089/feeds/no-such-feed.xml
+      3 N       (8/8) The Example Garden Notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open n:Next Unread r:Reload R:Reload All A:Mark Read C:Mark All Read /:Search ?:Help
+
+--- screen: opening the first feed in the list ---
+   Newsboat 2.34.1 - Your feeds (1 unread, 3 total)
+>>    1         (0/0) The Broken Fixture Feed
+      2         (0/0) http://127.0.0.1:18089/feeds/no-such-feed.xml
+      3 N       (8/8) The Example Garden Notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open n:Next Unread r:Reload R:Reload All A:Mark Read C:Mark All Read /:Search ?:Help
+   Error: feed contains no items!

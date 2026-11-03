@@ -1,0 +1,123 @@
+
+--- screen: feed list - two real feeds and one query feed ---
+   Newsboat 2.34.1 - Your feeds (2 unread, 3 total)
+>>    1 N       (8/8) The Example Garden Notes
+      2 N       (4/4) The Sample Kitchen Journal
+      3         (0/0) Unread garden notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open n:Next Unread r:Reload R:Reload All A:Mark Read C:Mark All Read /:Search ?:Help
+
+--- screen: inside the query feed - only unread garden articles ---
+   Newsboat 2.34.1 - Articles in feed 'Unread garden notes' (8 unread, 8 total) - query:Unread garden notes:unread = "yes"
+>>    1 N  Oct 30   257   |The Example Garde|  Watering tomatoes without drowning them
+      2 N  Oct 28   208   |The Example Garde|  Compost: the three-bin habit
+      3 N  Oct 26   225   |The Example Garde|  Why seedlings lean toward the window
+      4 N  Oct 23   227   |The Example Garde|  A five-minute soil test with a jam jar
+      5 N  Oct 21   172   |The Example Garde|  Feeding the soil in autumn
+      6 N  Oct 19   209   |The Example Garde|  Herbs that forgive beginners
+      7 N  Oct 16   207   |The Example Garde|  Reading a seed packet properly
+      8 N  Oct 14   188   |The Example Garde|  The case for a small garden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open s:Save r:Reload n:Next Unread A:Mark All Read /:Search ?:Help
+
+--- screen: the query feed again - the article just read has dropped out of it ---
+   Newsboat 2.34.1 - Articles in feed 'Unread garden notes' (7 unread, 7 total) - query:Unread garden notes:unread = "yes"
+>>    1 N  Oct 28   208   |The Example Garde|  Compost: the three-bin habit
+      2 N  Oct 26   225   |The Example Garde|  Why seedlings lean toward the window
+      3 N  Oct 23   227   |The Example Garde|  A five-minute soil test with a jam jar
+      4 N  Oct 21   172   |The Example Garde|  Feeding the soil in autumn
+      5 N  Oct 19   209   |The Example Garde|  Herbs that forgive beginners
+      6 N  Oct 16   207   |The Example Garde|  Reading a seed packet properly
+      7 N  Oct 14   188   |The Example Garde|  The case for a small garden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open s:Save r:Reload n:Next Unread A:Mark All Read /:Search ?:Help

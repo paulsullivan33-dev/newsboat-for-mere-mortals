@@ -1,0 +1,13 @@
+# Everything so far came from the lab's own fixture server. The
+# same commands against one real public feed -- Newsboat's own
+# release feed on GitHub, chosen because it is the project's:
+
+$ cat setups/real/urls
+https://github.com/newsboat/newsboat/releases.atom
+$ newsboat -u setups/real/urls -c setups/real/cache.db -x reload print-unread
+10 unread articles
+
+$ sqlite3 setups/real/cache.db "SELECT title FROM rss_item ORDER BY pubDate DESC LIMIT 3;"
+r2.45: Release Newsboat 2.45
+r2.44: Release Newsboat 2.44
+r2.43: Release Newsboat 2.43

@@ -1,0 +1,28 @@
+site_name: Newsboat for Mere Mortals
+site_description: A feed reader that lives in your terminal. Subscribing to RSS and Atom feeds with a plain text file, reading in a keyboard-driven interface, searching and building query feeds, queueing podcasts for its companion Podboat, and keeping the cache tidy, with the limits stated plainly.
+site_url: https://paulsullivan33-dev.github.io/newsboat-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Newsboat Is: what-newsboat-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing Newsboat: installing-newsboat.md
+  - Your First Feeds: your-first-feeds.md
+  - Reading Articles: reading-articles.md
+  - OPML and Tags: opml-and-tags.md
+  - Searching and Query Feeds: searching-and-query-feeds.md
+  - The Browser and Bookmarks: browser-and-bookmarks.md
+  - Podcasts with Podboat: podcasts-with-podboat.md
+  - Configuration and Housekeeping: configuration-and-housekeeping.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

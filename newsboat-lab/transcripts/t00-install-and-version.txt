@@ -1,0 +1,75 @@
+$ apt-cache policy newsboat
+newsboat:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+
+# Ubuntu 24.04 (noble) carries no newsboat package at all -- the lab
+# verified this against the raw noble universe index as well. The
+# project's documented route in that case is a source build:
+
+$ apt-cache policy cargo libstfl-dev | grep -E "^(cargo|libstfl-dev|  Candidate)"
+cargo:
+  Candidate: 1.75.0+dfsg0ubuntu1-0ubuntu7.4
+libstfl-dev:
+  Candidate: 0.22-3build9
+
+$ curl -sLO https://newsboat.org/releases/2.34.1/newsboat-2.34.1.tar.xz
+$ sha256sum newsboat-2.34.1.tar.xz
+11edb1399339ea6dac348a7ed4baa1b5a799ed899c478ea777496bc143df708a  newsboat-2.34.1.tar.xz
+
+$ tar -xf newsboat-2.34.1.tar.xz && cd newsboat-2.34.1
+$ make -j2 newsboat podboat     # about six and a half minutes on this machine
+    [... hundreds of compiler lines ...]
+g++ -std=c++11 -O2 ... -c src/queuemanager.cpp   [one of ~200 files]
+
+$ ./newsboat --version
+Newsboat 2.34.1 - https://newsboat.org/
+Copyright (C) 2006-2015 Andreas Krennmair
+Copyright (C) 2015-2024 Alexander Batischev
+Copyright (C) 2006-2017 Newsbeuter contributors
+Copyright (C) 2017-2024 Newsboat contributors
+
+Newsboat is free software licensed under the MIT License. (Type `./newsboat -vv' to see the full text.)
+It bundles:
+- JSON for Modern C++ library, licensed under the MIT License: https://github.com/nlohmann/json
+- optional-lite library, licensed under the Boost Software License: https://github.com/martinmoene/optional-lite
+- expected-lite library, licensed under the Boost Software License: https://github.com/martinmoene/expected-lite
+
+Newsboat 2.34.1
+System: Linux 7.0.0-39-generic (x86_64)
+Compiler: g++ 13.3.0
+ncurses: ncurses 6.4.20240113 (compiled with 6.4)
+libcurl: libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10 (compiled with 8.5.0)
+SQLite: 3.45.1 (compiled with 3.45.1)
+libxml2: compiled with 2.9.14
+
+
+$ ./newsboat --help
+Newsboat 2.34.1
+usage: ./newsboat [-i <file>|-e] [-u <urlfile>] [-c <cachefile>] [-x <command> ...] [-h]
+	-e, --export-to-opml		export OPML feed to stdout
+	    --export-to-opml2		export OPML 2.0 feed including tags to stdout
+	-r, --refresh-on-start		refresh feeds on start
+	-i, --import-from-opml=<file>	import OPML file
+	-u, --url-file=<urlfile>	read RSS feed URLs from <urlfile>
+	-c, --cache-file=<cachefile>	use <cachefile> as cache file
+	-C, --config-file=<configfile>	read configuration from <configfile>
+	-X, --vacuum			compact the cache
+	-x, --execute=<command>...	execute list of commands
+	-q, --quiet			quiet startup
+	-v, --version			get version information
+	-l, --log-level=<loglevel>	write a log with a certain log level (valid values: 1 to 6, for user error, critical, error, warning, info, and debug respectively)
+	-d, --log-file=<logfile>	use <logfile> as output log file
+	-E, --export-to-file=<file>	export list of read articles to <file>
+	-I, --import-from-file=<file>	import list of read articles from <file>
+	-h, --help			this help
+	    --cleanup			remove unreferenced items from cache
+
+Files:
+	- configuration:  /home/hatch/workspace/newsboat-labwork/home/.newsboat/config
+	- feed URLs:      /home/hatch/workspace/newsboat-labwork/home/.newsboat/urls
+	- cache:          /home/hatch/workspace/newsboat-labwork/home/.newsboat/cache.db
+
+Support at #newsboat at https://libera.chat or on our mailing list https://groups.google.com/g/newsboat
+For more information, check out https://newsboat.org/

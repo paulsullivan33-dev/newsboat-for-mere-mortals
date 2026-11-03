@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>The Workshop Bench Podcast</title>
+    <link>http://127.0.0.1:18089/podcast/</link>
+    <description>Short talks about hand tools and small repairs. A fixture podcast invented for this guide's lab; the "episodes" are one-second WAV tones the lab generated, standing in for real audio.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 29 Oct 2026 09:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Episode 2: Choosing a hand plane</title>
+      <link>http://127.0.0.1:18089/podcast/episode-02.html</link>
+      <guid isPermaLink="false">podcast-002</guid>
+      <pubDate>Thu, 29 Oct 2026 08:00:00 GMT</pubDate>
+      <description>What the numbers on planes mean, why a number 4 suits most benches, and the two-minute sharpening routine that makes any plane behave.</description>
+      <enclosure url="http://127.0.0.1:18089/audio/episode-02.wav" length="16044" type="audio/wav"/>
+    </item>
+
+    <item>
+      <title>Episode 1: The honest tape measure</title>
+      <link>http://127.0.0.1:18089/podcast/episode-01.html</link>
+      <guid isPermaLink="false">podcast-001</guid>
+      <pubDate>Tue, 27 Oct 2026 08:00:00 GMT</pubDate>
+      <description>Why the loose tip on a tape measure is a feature, how to burn an inch for accuracy, and when to stop measuring and start marking.</description>
+      <enclosure url="http://127.0.0.1:18089/audio/episode-01.wav" length="16044" type="audio/wav"/>
+    </item>
+  </channel>
+</rss>

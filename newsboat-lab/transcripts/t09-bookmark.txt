@@ -1,0 +1,95 @@
+
+### Ctrl-B opens the bookmark prompts; each pre-filled value is accepted with Enter.
+
+--- screen: the bookmark prompt, URL first ---
+   Newsboat 2.34.1 - Article 'A five-minute soil test with a jam jar' (4 unread, 8 total)
+   Feed: The Example Garden Notes
+   Title: A five-minute soil test with a jam jar
+   Date: Fri, 23 Oct 2026 08:00:00 +0000
+   Link: http://127.0.0.1:18089/garden/soil-test-jar.html
+
+   Fill a jar one third with soil, top up with water, shake hard, and let it settle for a day. Sand sinks first, silt
+   settles next, clay stays cloudy longest. The layers tell you roughly what you are gardening in, and what to add.
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   q:Quit s:Save n:Next Unread o:Open in Browser e:Enqueue ?:Help                                                    Top
+   URL: http://127.0.0.1:18089/garden/soil-test-jar.html
+
+--- screen: after the bookmark prompts ---
+   Newsboat 2.34.1 - Article 'A five-minute soil test with a jam jar' (4 unread, 8 total)
+   Feed: The Example Garden Notes
+   Title: A five-minute soil test with a jam jar
+   Date: Fri, 23 Oct 2026 08:00:00 +0000
+   Link: http://127.0.0.1:18089/garden/soil-test-jar.html
+
+   Fill a jar one third with soil, top up with water, shake hard, and let it settle for a day. Sand sinks first, silt
+   settles next, clay stays cloudy longest. The layers tell you roughly what you are gardening in, and what to add.
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   q:Quit s:Save n:Next Unread o:Open in Browser e:Enqueue ?:Help                                                    Top
+   Saved bookmark.
+
+### What the bookmark script wrote (it receives URL, title, description, feed title):
+
+$ cat ~/bookmarks.txt
+URL:         http://127.0.0.1:18089/garden/soil-test-jar.html
+Title:       A five-minute soil test with a jam jar
+Description: 
+Feed:        The Example Garden Notes
+---

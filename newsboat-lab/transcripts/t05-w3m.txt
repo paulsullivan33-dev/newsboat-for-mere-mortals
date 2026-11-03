@@ -1,0 +1,85 @@
+
+### The o key opens the article link in w3m.
+
+--- screen: w3m showing the article page itself ---
+   Why seedlings lean toward the window
+
+   The Example Garden Notes — a fixture page invented for this guide's lab.
+
+   Seedlings grow toward light, so a tray on a windowsill leans within days. Turn the tray a quarter turn every morning,
+   or give the plants light from directly above, and the stems stay short and sturdy instead of long and pale.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ≪ ↑ ↓ Viewing <Why seedlings lean toward the window — The Example Garden Notes>
+
+--- screen: back in Newsboat after w3m exits ---
+   Newsboat 2.34.1 - Article 'Why seedlings lean toward the window' (5 unread, 8 total)
+   Feed: The Example Garden Notes
+   Title: Why seedlings lean toward the window
+   Date: Mon, 26 Oct 2026 08:00:00 +0000
+   Link: http://127.0.0.1:18089/garden/seedlings-lean.html
+
+   Seedlings grow toward light, so a tray on a windowsill leans within days. Turn the tray a quarter turn every
+   morning, or give the plants light from directly above, and the stems stay short and sturdy instead of long and
+   pale.
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+>> q:Quit s:Save n:Next Unread o:Open in Browser e:Enqueue ?:Help                                                    Top

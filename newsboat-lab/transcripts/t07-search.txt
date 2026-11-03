@@ -1,0 +1,43 @@
+
+### Slash opens a search prompt; the word compost is typed and entered.
+
+--- screen: search results - articles mentioning compost ---
+   Newsboat 2.34.1 - Search results for 'compost' (1 unread, 2 total)
+      1    Oct 28   208   |The Example Garde|  Compost: the three-bin habit
+>>    2 N  Oct 21   172   |The Example Garde|  Feeding the soil in autumn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open z:Prev search results /:Search ?:Help

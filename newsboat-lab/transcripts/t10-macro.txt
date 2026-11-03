@@ -1,0 +1,126 @@
+
+--- screen: feed list before the macro - unread counts showing ---
+   Newsboat 2.34.1 - Your feeds (3 unread, 3 total)
+>>    1 N       (4/8) The Example Garden Notes
+      2 N       (4/4) The Sample Kitchen Journal
+      3 N       (2/2) The Workshop Bench Podcast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open n:Next Unread r:Reload R:Reload All A:Mark Read C:Mark All Read /:Search ?:Help
+
+### A comma starts a macro, then the macro key follows.
+
+--- screen: the macro ran mark-all-feeds-read, which asks before it acts ---
+   Newsboat 2.34.1 - Your feeds (3 unread, 3 total)
+>>    1 N       (4/8) The Example Garden Notes
+      2 N       (4/4) The Sample Kitchen Journal
+      3 N       (2/2) The Workshop Bench Podcast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open n:Next Unread r:Reload R:Reload All A:Mark Read C:Mark All Read /:Search ?:Help
+   Do you really want to mark all feeds as read (y:Yes n:No)?
+
+--- screen: feed list after confirming - every feed marked read ---
+   Newsboat 2.34.1 - Your feeds (0 unread, 3 total)
+>>    1         (0/8) The Example Garden Notes
+      2         (0/4) The Sample Kitchen Journal
+      3         (0/2) The Workshop Bench Podcast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open n:Next Unread r:Reload R:Reload All A:Mark Read C:Mark All Read /:Search ?:Help

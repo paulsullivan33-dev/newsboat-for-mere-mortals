@@ -1,0 +1,36 @@
+# OPML is the interchange format for subscription lists. The lab
+# starts from an empty urls file and imports the fixture OPML:
+
+$ wc -l < setups/opml/urls
+0
+$ newsboat -u setups/opml/urls -c setups/opml/cache.db -i fixtures/opml/fixture.opml
+Import of /home/hatch/workspace/newsboat-for-mere-mortals/newsboat-lab/fixtures/opml/fixture.opml finished.
+
+$ cat setups/opml/urls
+http://127.0.0.1:18089/feeds/garden-notes.xml "Garden and Kitchen"
+http://127.0.0.1:18089/feeds/kitchen-journal.xml "Garden and Kitchen"
+
+$ newsboat -u setups/opml/urls -c setups/opml/cache.db -x reload print-unread
+12 unread articles
+
+# And back out again -- export prints OPML to standard output:
+
+$ newsboat -u setups/opml/urls -c setups/opml/cache.db --export-to-opml
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>Newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="http://127.0.0.1:18089/feeds/garden-notes.xml" htmlUrl="http://127.0.0.1:18089/garden/" title="The Example Garden Notes" text="The Example Garden Notes"/>
+    <outline type="rss" xmlUrl="http://127.0.0.1:18089/feeds/kitchen-journal.xml" htmlUrl="http://127.0.0.1:18089/feeds/kitchen-journal.xml" title="The Sample Kitchen Journal" text="The Sample Kitchen Journal"/>
+  </body>
+</opml>
+
+# Version 2 of the export keeps the tags. From the main setup, whose
+# urls file carries tags:
+
+$ newsboat --export-to-opml2 | grep outline
+<outline type="rss" xmlUrl="http://127.0.0.1:18089/feeds/garden-notes.xml" htmlUrl="http://127.0.0.1:18089/garden/" title="The Example Garden Notes" text="The Example Garden Notes" category="Garden and Kitchen,garden"/>
+<outline type="rss" xmlUrl="http://127.0.0.1:18089/feeds/kitchen-journal.xml" htmlUrl="http://127.0.0.1:18089/feeds/kitchen-journal.xml" title="The Sample Kitchen Journal" text="The Sample Kitchen Journal" category="Garden and Kitchen,kitchen"/>
+<outline type="rss" xmlUrl="http://127.0.0.1:18089/feeds/workshop-podcast.xml" htmlUrl="http://127.0.0.1:18089/podcast/" title="The Workshop Bench Podcast" text="The Workshop Bench Podcast" category="Listening,podcast"/>

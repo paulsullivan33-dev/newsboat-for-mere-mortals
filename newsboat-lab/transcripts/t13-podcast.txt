@@ -1,0 +1,183 @@
+# Queueing an episode in Newsboat (the e key in the article):
+
+--- screen: the podcast feed - two episodes ---
+   Newsboat 2.34.1 - Articles in feed 'The Workshop Bench Podcast' (2 unread, 2 total) - http://127.0.0.1:18089/feeds/works
+>>    1 N  Oct 29   134   Episode 2: Choosing a hand plane
+      2 N  Oct 27   129   Episode 1: The honest tape measure
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit ENTER:Open s:Save r:Reload n:Next Unread A:Mark All Read /:Search ?:Help
+
+### The e key queues this episode for Podboat.
+
+--- screen: after queueing ---
+   Newsboat 2.34.1 - Article 'Episode 2: Choosing a hand plane' (1 unread, 2 total)
+   Feed: The Workshop Bench Podcast
+   Title: Episode 2: Choosing a hand plane
+   Date: Thu, 29 Oct 2026 08:00:00 +0000
+   Link: http://127.0.0.1:18089/podcast/episode-02.html
+   Podcast Download URL: http://127.0.0.1:18089/audio/episode-02.wav (type: audio/wav)
+
+   What the numbers on planes mean, why a number 4 suits most benches, and the two-minute sharpening routine that
+   makes any plane behave.
+
+   Links:
+   [1]: http://127.0.0.1:18089/audio/episode-02.wav (audio)
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   q:Quit s:Save n:Next Unread o:Open in Browser e:Enqueue ?:Help                                                    Top
+   Added http://127.0.0.1:18089/audio/episode-02.wav to download queue.
+
+### Newsboat wrote one line to its queue file:
+$ cat ~/.newsboat/queue
+http://127.0.0.1:18089/audio/episode-02.wav "/home/hatch/workspace/newsboat-labwork/downloads/episode-02.wav"
+
+### Podboat reads the same queue file:
+
+--- screen: podboat - one episode waiting, status queued ---
+   Queue (0 downloads in progress, 1 total) - 0.00 KB/s total
+>>    1 [   0.0MB/   0.0MB] [  0.0 %] [   0.00 KB/s] queued               http://127.0.0.1:18089/audio/episode-02.wav -> /h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit d:Download c:Cancel D:Delete P:Purge Finished a:Toggle Automatic Download p:Play m:Mark as Finished ?:Help
+
+### The d key starts the download.
+
+--- screen: podboat after downloading ---
+   Queue (0 downloads in progress, 1 total) - 0.00 KB/s total
+>>    1 [   0.0MB/   0.0MB] [100.0 %] [   1.26 MB/s] ready                http://127.0.0.1:18089/audio/episode-02.wav -> /h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   q:Quit d:Download c:Cancel D:Delete P:Purge Finished a:Toggle Automatic Download p:Play m:Mark as Finished ?:Help
+
+### The downloaded file, and the queue line afterwards:
+$ ls -l downloads/ && file downloads/episode-02.wav
+16044 /home/hatch/workspace/newsboat-labwork/downloads/episode-02.wav
+episode-02.wav: RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 8000 Hz
+$ cat ~/.newsboat/queue
+http://127.0.0.1:18089/audio/episode-02.wav "/home/hatch/workspace/newsboat-labwork/downloads/episode-02.wav" downloaded

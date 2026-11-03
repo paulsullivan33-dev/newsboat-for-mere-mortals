@@ -1,0 +1,27 @@
+# A reload can be driven from the command line, without opening the
+# interface at all -- this is also how you would script it:
+
+$ newsboat -x reload
+exit: 0
+
+$ newsboat -x reload print-unread
+14 unread articles
+
+$ ls -la ~/.newsboat/
+-rw-r----- 1 root root 61440 Nov  3 01:57 cache.db
+-rw-rw---- 1 root root   222 Nov  3 01:51 urls
+
+# Everything Newsboat knows lives in one SQLite database, the cache:
+
+$ sqlite3 ~/.newsboat/cache.db "SELECT feedurl, title, unread_count FROM rss_feed;" 2>/dev/null || sqlite3 ~/.newsboat/cache.db ".tables"
+google_replay  metadata       rss_feed       rss_item     
+
+$ sqlite3 ~/.newsboat/cache.db "SELECT count(*) FROM rss_item;"
+14
+$ sqlite3 ~/.newsboat/cache.db "SELECT count(*) FROM rss_item WHERE unread = 1;"
+14
+
+$ sqlite3 ~/.newsboat/cache.db "SELECT title, (SELECT count(*) FROM rss_item WHERE feedurl = rss_feed.rssurl) FROM rss_feed;"
+The Example Garden Notes|8
+The Sample Kitchen Journal|4
+The Workshop Bench Podcast|2

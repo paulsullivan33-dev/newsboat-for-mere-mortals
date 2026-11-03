@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>The Sample Kitchen Journal</title>
+  <link href="http://127.0.0.1:18089/kitchen/"/>
+  <id>http://127.0.0.1:18089/kitchen/</id>
+  <updated>2026-10-29T09:00:00Z</updated>
+  <subtitle>Plain cooking notes for weeknight meals. A fixture feed invented for this guide's lab.</subtitle>
+
+  <entry>
+    <title>A sharper knife is a safer knife</title>
+    <link href="http://127.0.0.1:18089/kitchen/sharp-knife.html"/>
+    <id>kitchen-004</id>
+    <updated>2026-10-29T08:00:00Z</updated>
+    <summary>A dull knife slips; a sharp one goes where you point it. A few strokes on a steel before you start, and a proper sharpening a few times a year, is the whole secret.</summary>
+  </entry>
+
+  <entry>
+    <title>Stock from the freezer bag</title>
+    <link href="http://127.0.0.1:18089/kitchen/freezer-stock.html"/>
+    <id>kitchen-003</id>
+    <updated>2026-10-27T08:00:00Z</updated>
+    <summary>Keep a bag in the freezer for onion ends, carrot tops and herb stems. When the bag is full, cover the contents with water, simmer for an hour, and strain. Stock from scraps costs nothing and tastes like it.</summary>
+  </entry>
+
+  <entry>
+    <title>The five-minute pan sauce</title>
+    <link href="http://127.0.0.1:18089/kitchen/pan-sauce.html"/>
+    <id>kitchen-002</id>
+    <updated>2026-10-25T08:00:00Z</updated>
+    <summary>After frying, the pan holds the flavour. Pour in a glass of water or wine, scrape the browned bits loose as it bubbles, and finish with a knob of butter. Five minutes turns plain into finished.</summary>
+  </entry>
+
+  <entry>
+    <title>Salting pasta water, honestly</title>
+    <link href="http://127.0.0.1:18089/kitchen/pasta-water.html"/>
+    <id>kitchen-001</id>
+    <updated>2026-10-23T08:00:00Z</updated>
+    <summary>About a tablespoon of salt per litre of water, added when the water boils. The pasta is seasoned from the inside, and a cup of the starchy water loosens any sauce. That is the entire trick.</summary>
+  </entry>
+</feed>

@@ -1,0 +1,84 @@
+
+### The o key hands the article link to the configured browser.
+
+--- screen: the browser script reports the URL it was handed ---
+   Date: Wed, 28 Oct 2026 08:00:00 +0000
+   Link: http://127.0.0.1:18089/garden/compost-three-bins.html
+
+   One bin filling, one bin cooking, one bin ready to use. Keep the mix near three parts dry material to one part
+   green, turn it when you walk past with a fork in your hand, and let rain do most of the watering.
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+>> q:Quit s:Save n:Next Unread o:Open in Browser e:Enqueue ?:Help                                                    Top
+   The browser was handed this URL: http://127.0.0.1:18089/garden/compost-three-bins.html
+   <title>Compost: the three-bin habit — The Example Garden Notes</title>
+   (Press Enter to return to Newsboat.)
+
+--- screen: back in the article afterwards ---
+   Newsboat 2.34.1 - Article 'Compost: the three-bin habit' (6 unread, 8 total)
+   Feed: The Example Garden Notes
+   Title: Compost: the three-bin habit
+   Date: Wed, 28 Oct 2026 08:00:00 +0000
+   Link: http://127.0.0.1:18089/garden/compost-three-bins.html
+
+   One bin filling, one bin cooking, one bin ready to use. Keep the mix near three parts dry material to one part
+   green, turn it when you walk past with a fork in your hand, and let rain do most of the watering.
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+   ~
+>> q:Quit s:Save n:Next Unread o:Open in Browser e:Enqueue ?:Help                                                    Top

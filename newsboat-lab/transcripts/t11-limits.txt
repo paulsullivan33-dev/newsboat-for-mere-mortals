@@ -1,0 +1,19 @@
+# max-items caps how much of a feed Newsboat keeps. First, no cap:
+
+$ newsboat -u setups/limits/urls -c setups/limits/cache.db -x reload
+$ sqlite3 setups/limits/cache.db "SELECT count(*) FROM rss_item;"
+8
+
+# The same feed, a fresh cache, and a config that says max-items 3:
+
+$ cat setups/limits/config
+max-items 3
+$ rm setups/limits/cache.db
+$ newsboat -u setups/limits/urls -c setups/limits/cache.db -C setups/limits/config -x reload
+$ sqlite3 setups/limits/cache.db "SELECT title FROM rss_item ORDER BY pubDate;"
+Why seedlings lean toward the window
+Compost: the three-bin habit
+Watering tomatoes without drowning them
+
+# Only the three newest survive; the five older articles are gone
+# from the cache, not just hidden.
